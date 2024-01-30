@@ -88,7 +88,7 @@ public class DiaryService {
 
     private DateWeather getDateWeather(LocalDate date) {
         List<DateWeather> dateWeatherListFromDB = dateWeatherRepository.findAllByDate(date);
-        if(dateWeatherListFromDB.size() == 0) {
+        if(dateWeatherListFromDB.isEmpty()) {
             // 과거 날짜의 날씨 가져오는 것은 유료라 현재 날시 가져옴
             // 정책상으로 현재 날씨를 가져올 수도 있고, 날씨 없이 일기를 저장할수도 있음
             return getWeatherFromApi();
