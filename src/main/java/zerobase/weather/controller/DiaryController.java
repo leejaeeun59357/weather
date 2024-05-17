@@ -2,6 +2,7 @@ package zerobase.weather.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import zerobase.weather.domain.Diary;
@@ -11,13 +12,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 public class DiaryController {
+
     private final DiaryService diaryService;
-
-    public DiaryController(DiaryService diaryService) {
-        this.diaryService = diaryService;
-    }
-
 
     @Operation(summary = "일기 텍스트와 날씨를 이용해서 DB에 일기 저장", description = "이것은 노트")
     @PostMapping("/create/diary")
