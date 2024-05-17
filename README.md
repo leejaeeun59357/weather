@@ -3,6 +3,10 @@
 
 - USE: Spring, Jpa, Mysql, REST API, swagger, Postman
 
+## ERD
+![image](https://github.com/leejaeeun59357/weather/assets/149572895/d5da9b3b-f712-40b8-b68e-92f126cfcb8a)
+
+
 ## 날씨 데이터 CRUD
 
 ### 날씨 데이터 저장 API
